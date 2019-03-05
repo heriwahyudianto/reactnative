@@ -18,6 +18,32 @@ const instructions = Platform.select({
     'Shake or press menu button for dev menu',
 });
 
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#F5FCFF',
+  },
+  welcome: {
+    fontSize: 20,
+    textAlign: 'center',
+    margin: 10,
+  },
+  instructions: {
+    textAlign: 'center',
+    color: '#333333',
+    marginBottom: 5,
+  },
+  ctaButton:{
+    backgroundColor:'blue',
+    color:'#fff',
+    paddingHorizontal:25,
+    paddingVertical:10,
+    margin: 10
+  }
+});
+
 class Greeting extends Component {
   constructor(props){
     super(props);
@@ -30,7 +56,7 @@ class Greeting extends Component {
   render(){
     if (this.state.defName=='Su'){
       return (
-        <Text>Hello {this.state.defName}</Text>
+        <Text style={styles.ctaButton}>Hello {this.state.defName}</Text>
       );
     } else {
       return (
@@ -55,21 +81,3 @@ export default class Bananas extends Component {
   }
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
-  },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
-  },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
-  },
-});
