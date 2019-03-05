@@ -73,9 +73,13 @@ export default class Bananas extends Component {
       uri:'https://upload.wikimedia.org/wikipedia/commons/d/de/Bananavarieties.jpg',
     };
     return (
-      <View>
-        <Image source={pic} width={Dimensions.get('window').width} />
-        <Greeting name="heri" />
+      <View style={{flex:1}}>
+        <View style={{flex: 1, backgroundColor: 'powderblue'}} >
+          <Image source={pic} width={Dimensions.get('window').width} />
+        </View>
+        <View style={{flex:2, backgroundColor:'skyblue'}}>
+          <Greeting name="heri" />
+        </View>
       </View>
     );
   }
